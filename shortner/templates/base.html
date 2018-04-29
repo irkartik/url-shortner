@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeekyVisuals's URL Shortener</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'shorturls/main.css' %}">
+</head>
+<body>
+	<h1>GeekyVisuals's URL Shortener!</h1>
+	<div class="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>
