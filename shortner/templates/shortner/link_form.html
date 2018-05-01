@@ -1,15 +1,20 @@
 {% extends 'shortner/base.html' %}
 {% block content %}
+	<style type="text/css">
+		input{
+			margin: 0 auto;
+		}
+	</style>
 	<form method="post">
 		{% csrf_token %}
-		{{ form.as_ul }}
+		{{ form }}
 		<input type="submit" value="Shorten" />
 	</form>
 
-	{% for link in link_list %}
+	<!-- {% for link in link_list %}
 		<ul>
 			<li>Short Link: <a href="{{ link.short_url }}">{{ site_url }}{{ link.short_url }}</a></li>
 			<li>Original Link: {{ link.url }}</li>
 		</ul>
-	{% endfor %}
+	{% endfor %} -->
 {% endblock %}
